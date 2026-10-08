@@ -21,6 +21,26 @@ Python과 LLM을 활용해 보안 로그와 경보를 분석하고,
   
 ---
 
+## Pipeline
+
+```mermaid
+flowchart TD
+    A[Security Log] --> B[Parsing / Normalization]
+    B --> C[Detection Rules]
+    C --> D[Security Event]
+    D --> E[Webhook / Scheduler]
+    E --> F[Gemini LLM Analysis]
+    F --> G[Risk Sorting]
+    G --> H[Security Report]
+    H --> I[Notification]
+
+    J[config.json] --> F
+    J --> H
+    J --> I
+```
+
+---
+
 ## 📁 Main Files
 
 | 파일 | 설명 |
